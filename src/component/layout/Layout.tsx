@@ -5,7 +5,9 @@ import s from "./layout.scss";
 export default function Layout() {
   return (
     <View style={s.container}>
-      <Text>Open up App.tsx to start w! {JSON.stringify(s)}</Text>
+      <Text style={s.text}>
+        Open up App.tsx to start w! {JSON.stringify(s)}
+      </Text>
       <StatusBar style="auto" />
     </View>
   );

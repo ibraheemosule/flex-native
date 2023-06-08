@@ -1,5 +1,11 @@
+@import "../../base-styles/colors";
+
 .container {
   flex: 1;
   background-color: #fff;
-  padding: 70px 10px;
+  border: 1px solid $borderCol;
+  border-radius: 20px;
+  margin: 60px 16px 50px;
+  box-shadow: 8px 1px 10px rgba(0, 0, 0, 0.179);
+  padding: 16px;
 }
