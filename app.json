@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "flex",
-    "slug": "flex",
+    "name": "flex-task",
+    "slug": "flex-task",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,9 +11,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["ts", "tsx", "scss", "sass"]
+    },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
