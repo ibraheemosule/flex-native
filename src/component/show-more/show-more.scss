@@ -1,9 +1,9 @@
-@import '../../base-styles/colors';
-@import '../../base-styles/typography';
+@import "../../base-styles/colors";
+@import "../../base-styles/typography";
 
 .show_more {
   flex-basis: 20px;
-  margin: 32px 0 16px;
+  margin: 24px 0 16px;
 }
 
 .no_event {
@@ -24,5 +24,4 @@
 .event_text {
   color: $secCol;
   margin-left: 20px;
-  
 }

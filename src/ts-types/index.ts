@@ -33,5 +33,7 @@ interface Activity {
 export interface IContext {
   activity: EventType[];
   activitySlice: EventType[];
-getMoreActivity: (number: number) => void;
+showMoreActivity: (number: number) => void;
+selectedActivity: string[];
+toggleActivity: (id: string) => void
 }
