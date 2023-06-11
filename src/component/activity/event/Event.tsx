@@ -1,14 +1,18 @@
 import s from "./event.scss";
-import { View, Text, TouchableHighlight } from "react-native";
+import { View, Text } from "react-native";
 import { EventType } from "../../../ts-types";
 import { statusColors } from "../../../utils";
 import {  FontAwesome } from "@expo/vector-icons";
+import { useContext } from "react";
+import { Context } from "../../../utils/context";
 
 type PropType = {
   ev: EventType;
 };
 
 const Event = ({ ev }: PropType) => {
+  const{ activity} = useContext(Context)
+  console.log(activity)
   return (
     <>
       <View style={s.activity}>

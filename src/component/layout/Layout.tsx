@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import s from "./layout.scss";
 import Activity from "../activity/Activity";
 import ShowMore from "../show-more/ShowMore";
+import ContextWrapper from "../context-wrapper/ContextWrapper";
 
 export default function Layout() {
   return (
+    <ContextWrapper>
     <SafeAreaView style={{ flex: 1 }}>
       <View style={[s.container]}>
         <Activity />
@@ -13,5 +15,6 @@ export default function Layout() {
         <StatusBar style="auto" />
       </View>
     </SafeAreaView>
+    </ContextWrapper>
   );
 }

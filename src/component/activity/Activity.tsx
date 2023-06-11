@@ -1,22 +1,24 @@
 import s from "./activity.scss";
-import { FlatList, SafeAreaView, View } from "react-native";
+import { FlatList,  View } from "react-native";
 import { formatDate } from "../../utils";
-import events from "../../../events.json";
 import Event from "./event/Event";
 import Comment from "./comment/Comment";
 import { TouchableHighlight } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { Context } from "../../utils/context";
+import { useContext } from "react";
 
 const Activity = () => {
+  const {activitySlice} = useContext(Context)
   return (
     <View style={{ flexShrink: 1 }}>
       <FlatList
         showsVerticalScrollIndicator={false}
-        data={events}
+        data={activitySlice}
         keyExtractor={item => item.createdAt}
         renderItem={({ item: event, index: i }) => {
           const ev = { ...event };
-          const isAuthorSame = ev.author === events[i - 1]?.author;
+          const isAuthorSame = ev.author === activitySlice[i - 1]?.author;
 
           ev.createdAt = formatDate(ev.createdAt).toString();
 
@@ -32,7 +34,7 @@ const Activity = () => {
               </View>
 
               <Event ev={ev} />
-              {ev.type === "comment" ? <Comment ev={ev} /> : ""}
+              {ev.type === "comment" ? <Comment ev={ev} /> : null}
             </View>
           );
         }}

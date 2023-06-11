@@ -1,3 +1,5 @@
+
+
 export interface IState {
   events: EventType[];
   slicedEvents: EventType[];
@@ -26,4 +28,10 @@ export type IActivity = Omit<IComment, "message"> & {
 interface Activity {
   type: string;
   status: string;
+}
+
+export interface IContext {
+  activity: EventType[];
+  activitySlice: EventType[];
+getMoreActivity: (number: number) => void;
 }
