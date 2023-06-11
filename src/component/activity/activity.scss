@@ -1,2 +1,36 @@
 @import "../../base-styles/colors";
 @import "../../base-styles/typography";
+
+.container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.border {
+  border: 0 solid $lineCol;
+  border-top-width: 1px;
+}
+
+.hide {
+  opacity: 0;
+}
+.form_group {
+  margin: 0 12px 0 0;
+  justify-content: center;
+}
+
+.label {
+  border: 1px solid #707070;
+  padding: 3px;
+  border-radius: 100%;
+}
+
+.checked {
+  background-color: red;
+}
+
+.activity {
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+}

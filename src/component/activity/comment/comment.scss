@@ -1,0 +1,47 @@
+@import "../../../base-styles/colors";
+@import "../../../base-styles/typography";
+
+.comment_container {
+  flex-basis: 100%;
+  margin-top: 0.75rem;
+  padding-left: 35px;
+}
+
+.comment {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid $borderCol;
+  border-radius: 8px;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.info {
+  margin-top: 0.75rem;
+  flex-direction: row;
+}
+
+.avi {
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  background: #dccae8;
+  border-radius: 9999px;
+}
+
+.name {
+  @include md-text;
+}
+
+.time {
+  @include sm-text;
+}
+
+.text {
+  margin-top: 0.5rem;
+  @include sm-text;
+}

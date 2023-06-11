@@ -1,0 +1,28 @@
+@import '../../base-styles/colors';
+@import '../../base-styles/typography';
+
+.show_more {
+  flex-basis: 20px;
+  margin: 32px 0 16px;
+}
+
+.no_event {
+  @include md-text;
+  color: $textCol;
+  padding-left: 32px;
+}
+
+.more_events {
+  flex-direction: row;
+}
+
+.file_icon {
+  height: 20px;
+  width: 20px;
+}
+
+.event_text {
+  color: $secCol;
+  margin-left: 20px;
+  
+}
