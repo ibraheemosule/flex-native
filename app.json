@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "flex-task",
+    "name": "Flex Task",
     "slug": "flex-task",
+    "description": "A react native task by flex finance",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
