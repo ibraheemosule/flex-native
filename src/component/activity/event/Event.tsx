@@ -26,11 +26,7 @@ const Event = ({ ev }: PropType) => (
             style={s.status}
             name="circle"
             size={12}
-            color={
-              ev.activity?.status !== undefined
-                ? statusColors[ev.activity.status]
-                : "#F28282"
-            }
+            color={statusColors[ev.activity?.status ?? "Pending"]}
           />
           <Text style={s.user}>{ev.activity?.status}</Text>
           <Text>
